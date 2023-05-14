@@ -4,6 +4,10 @@ import romance from '@images/romance.avif'
 import fantastic from '@images/fantastic.avif'
 import mangas from '@images/mangas.jpg'
 import thriller from '@images/thriller.avif'
+import child from '@images/child.avif'
+import teenager from '@images/teenager.avif'
+import adventure from '@images/adventure.avif'
+import theater from '@images/theater.avif'
 
 const categories = createSlice({
     name: 'Categories',
@@ -31,8 +35,28 @@ const categories = createSlice({
             },
             {
                 id: 5,
+                title: 'Aventure',
+                background: adventure
+            },
+            {
+                id: 6,
+                title: 'Adolescent',
+                background: teenager
+            },
+            {
+                id: 7,
+                title: 'Enfant',
+                background: child
+            },
+            {
+                id: 8,
                 title: 'Mangas',
                 background: mangas
+            },
+            {
+                id: 9,
+                title: 'Théâtre',
+                background: theater
             }]
     },
     reducers: {
