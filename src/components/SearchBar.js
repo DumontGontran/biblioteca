@@ -1,17 +1,18 @@
 import React from 'react'
+import { FaSearch } from 'react-icons/fa'
 import '@styles/components/searchBar.scss'
 
 const SearchBar = () => {
     return (
         <form className='searchBar'>
             <input type='text' id='search' placeholder='Rechercher...' />
-            <input list='format' id='format-choice' name='format-choice' placeholder='format...' />
-            <datalist id='format'>
-                <option value='Relié'/>
-                <option value='Broché'/>
-                <option value='Kindle'/>
-            </datalist>
-            <button>*</button>
+            <select id='format'>
+                <option value='Poche'>Poche</option>
+                <option value='Relié'>Relié</option>
+                <option value='Broché'>Broché</option>
+                <option value='Numérique'>Numérique</option>
+            </select>
+            <button><FaSearch /></button>
         </form>
     )
 }
