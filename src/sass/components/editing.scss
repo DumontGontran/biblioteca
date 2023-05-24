@@ -1,0 +1,109 @@
+.Editing {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". editing_title editing_title editing_favoris ."
+        ". . . . ."
+        ". editing_form editing_form editing_form ."
+        ". . . . ."
+        ". . . . .";
+    background-color: darkorchid;
+    margin-left: 80%;
+    width: 600px;
+    max-height: 57.2rem;
+
+    &_head {
+        display: flex;
+        justify-content: space-evenly;
+        height: 90px;
+
+        &_titre {
+            color: white;
+            grid-area: editing_title;
+            text-decoration: underline;
+            font-size: 30px;
+        }
+
+        &_favoris {
+            margin-top: 30px;
+            grid-area: editing_favoris;
+            cursor: pointer;
+            font-size: 30px;
+            transition: all 400ms ease-in-out;
+
+            &:hover {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: red;
+            }
+        }
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        grid-area: editing_form;
+        border-left: 1px solid darkgray;
+        border-right: 1px solid darkgray;
+        padding: 30px 10px;
+    }
+
+    & label {
+        text-align: left;
+        margin-bottom: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    & input {
+        margin-bottom: 20px;
+    }
+
+    & select {
+        margin-bottom: 20px;
+    }
+
+    &_note {
+        display: flex;
+        flex-direction: row;
+
+        &-option {
+            margin: 10px 15px;
+        }
+        & p {
+            margin: 7px 0;
+            font-weight: bold;
+        }
+    }
+
+    &_submit {
+        margin-bottom: 5px;
+        color: whitesmoke;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: lightskyblue;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: background-color 400ms ease-in-out;
+
+        &:hover {
+            background-color: blue;
+        }
+    }
+
+    &_delete {
+        color: whitesmoke;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: lightcoral;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: background-color 400ms ease-in-out;
+
+        &:hover {
+            background-color: red;
+        }
+    }
+}

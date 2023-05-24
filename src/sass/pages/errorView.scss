@@ -1,0 +1,21 @@
+.ErrorView {
+    display: flex;
+    flex-direction: column;
+    background-color: lightcoral;
+    min-height:58.55rem;
+    justify-content: center;
+
+    &_title {
+        margin-right: 250px;
+        color: whitesmoke;
+        font-size: 60px;
+        text-shadow: 0 0 20px black;
+    }
+
+    &_message {
+        margin-left: 250px;
+        color: whitesmoke;
+        font-size: 40px;
+        text-shadow: 0 0 20px black;
+    }
+}

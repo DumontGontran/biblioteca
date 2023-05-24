@@ -7,8 +7,19 @@
         height: 30px;
     }
 
+    & select {
+        cursor: pointer;
+        width: 300px;
+        height: 36px;
+    }
+
     & button {
-        width: 35px;
+        cursor: pointer;
+        color: white;
+        background-color: darkorchid;
+        border: 1px solid black;
+        font-weight: bold;
+        width: 36px;
         height: 35px;
     }
 }

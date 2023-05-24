@@ -5,12 +5,12 @@
 
     &_section {
         display: grid;
-        margin: 30px 160px;
+        margin: 30px 310px;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
         column-gap: 20px;
         row-gap: 20px;
-        width: 1000px;
+        width: 980px;
     }
 
     & img {
