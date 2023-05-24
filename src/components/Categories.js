@@ -11,7 +11,7 @@ const Categories = () => {
     return (
         <section className='categories_section'>
             {categories ? categories.map(category =>
-                <Link to={null} className='categories' key={category.id}>
+                <Link to={category.title} className='categories' key={category.id}>
                     <img src={category.background} alt={category.title} />
                     <span>{category.title}</span>
                 </Link>

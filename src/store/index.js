@@ -8,6 +8,7 @@ import child from '@images/child.avif'
 import teenager from '@images/teenager.avif'
 import adventure from '@images/adventure.avif'
 import theater from '@images/theater.avif'
+import BD from '@images/BD.avif'
 
 const categories = createSlice({
     name: 'Categories',
@@ -30,7 +31,7 @@ const categories = createSlice({
             },
             {
                 id: 4,
-                title: 'Thriller/Policier',
+                title: 'Thriller-Policier',
                 background: thriller
             },
             {
@@ -55,6 +56,11 @@ const categories = createSlice({
             },
             {
                 id: 9,
+                title: 'BD',
+                background: BD
+            },
+            {
+                id: 10,
                 title: 'Théâtre',
                 background: theater
             }]
