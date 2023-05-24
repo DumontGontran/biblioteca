@@ -9,8 +9,8 @@ const Header = () => {
             <nav>
                 <Link to="/" className='logo'><img src={library} alt='ACCUEIL' /></Link>
                 <Link to="/add">Ajouter un ouvrage</Link>
-                <Link to="/edit">Éditer un ouvrage</Link>
-                <Link to="/delete">Supprimer un ouvrage</Link>
+                <Link to="/list">Liste des ouvrages</Link>
+                <Link to="/wishlist">Liste de souhaits</Link>
                 <Link to="/favorites">Favoris</Link>
             </nav>
         </header>
