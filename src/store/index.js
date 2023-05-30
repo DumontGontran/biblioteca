@@ -73,7 +73,7 @@ const categories = createSlice({
 const users = createSlice({
     name: 'Users',
     initialState: {
-
+        user: []
     },
     reducers: {
 
@@ -83,7 +83,7 @@ const users = createSlice({
 const library = createSlice({
     name: 'Library',
     initialState: {
-
+        library: []
     },
     reducers: {
 

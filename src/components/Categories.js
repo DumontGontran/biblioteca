@@ -6,13 +6,12 @@ import '@styles/components/categories.scss'
 
 const Categories = () => {
     const categories = useSelector(() => store.getState().Categories.categories)
-    console.log(categories)
 
     return (
         <section className='categories_section'>
             {categories ? categories.map(category =>
-                <Link to={category.title} className='categories' key={category.id}>
-                    <img src={category.background} alt={category.title} />
+                <Link to={category.title.toLowerCase().split(' ').join('')} className='categories' key={category.id}>
+                    <img src={category.background} alt={category.title.toUpperCase()} />
                     <span>{category.title}</span>
                 </Link>
             ) : null}

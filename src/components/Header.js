@@ -9,7 +9,7 @@ const Header = () => {
             <nav>
                 <Link to="/" className='logo'><img src={library} alt='ACCUEIL' /></Link>
                 <Link to="/add">Ajouter un ouvrage</Link>
-                <Link to="/list">Liste des ouvrages</Link>
+                <Link to="/library">Liste des ouvrages</Link>
                 <Link to="/wishlist">Liste de souhaits</Link>
                 <Link to="/favorites">Favoris</Link>
             </nav>

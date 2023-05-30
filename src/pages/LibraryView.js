@@ -1,15 +1,14 @@
+import { Footer, Header, Library, SearchBar } from '@components'
 import React from 'react'
-import { Header, SearchBar, Categories, Footer } from '@components'
-import '@styles/pages/home.scss'
 
-const Home = () => {
+const LibraryView = () => {
     return (
         <>
             <div className='Home'>
                 <Header />
                 <main>
                     <SearchBar />
-                    <Categories />
+                    <Library />
                 </main>
             </div>
             <Footer />
@@ -17,4 +16,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default LibraryView

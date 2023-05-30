@@ -1,15 +1,14 @@
+import { Footer, Header, SearchBar, Favorites } from '@components'
 import React from 'react'
-import { Header, SearchBar, Categories, Footer } from '@components'
-import '@styles/pages/home.scss'
 
-const Home = () => {
+const FavoritesView = () => {
     return (
         <>
             <div className='Home'>
                 <Header />
                 <main>
                     <SearchBar />
-                    <Categories />
+                    <Favorites />
                 </main>
             </div>
             <Footer />
@@ -17,4 +16,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default FavoritesView
