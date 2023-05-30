@@ -3,11 +3,12 @@ header {
     flex-direction: row;
     background-color: skyblue;
     border-right: 2px solid black;
-    height: 97.5vh;
+    height: 100vh;
 
     & nav {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 300px;
 
         & .logo {
@@ -22,8 +23,18 @@ header {
                 left: 90px;
                 content: "Accueil";
                 font-size: 40px;
-                text-shadow:  0 0 3px black;
+                text-shadow: 0 0 3px black;
             }
+        }
+
+        & div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .logout {
+            border-top: 2px solid black;
+            border-bottom: none;
         }
 
         & a {

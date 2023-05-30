@@ -7,11 +7,14 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <Link to="/" className='logo'><img src={library} alt='ACCUEIL' /></Link>
+                <div>
+                <Link to="/home" className='logo'><img src={library} alt='ACCUEIL' /></Link>
                 <Link to="/add">Ajouter un ouvrage</Link>
                 <Link to="/library">Liste des ouvrages</Link>
                 <Link to="/wishlist">Liste de souhaits</Link>
                 <Link to="/favorites">Favoris</Link>
+                </div>
+                <Link to="/login" className='logout'>Se Déconnecter</Link>
             </nav>
         </header>
     )
