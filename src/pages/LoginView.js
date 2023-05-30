@@ -1,18 +1,12 @@
 import React from 'react'
-import { Header, Footer, Login } from '@components'
-import '@styles/pages/addingView.scss'
+import { Login } from '@components'
+import '@styles/pages/loginView.scss'
 
 const LoginView = () => {
     return (
-        <>
-        <div className='AddingView'>
-            <Header />
-            <main>
+        <main className='LoginView'>
                 <Login />
-            </main>
-        </div>
-        <Footer />
-    </>
+        </main>
     )
 }
 
