@@ -1,4 +1,4 @@
-.Login {
+.Register {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -32,7 +32,7 @@
         grid-area: login_form;
         border-left: 1px solid darkgray;
         border-right: 1px solid darkgray;
-        padding: 314px 10px;
+        padding: 147px 10px;
 
         & a {
             color: whitesmoke;

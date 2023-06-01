@@ -1,6 +1,6 @@
 import React from 'react'
 import '@styles/components/login.scss'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const navigate = useNavigate()
@@ -18,6 +18,7 @@ const Login = () => {
                 <label htmlFor='Login_password'>Mot de passe: *</label>
                 <input type='text' id='Login_password' placeholder="Motdepasse1*" minLength={8} maxLength={32} required />
                 <button className='Login_submit' onClick={navigateToHomepage}>Se connecter</button>
+                <Link to="/register">S'inscrire</Link>
             </form>
         </section>
     )

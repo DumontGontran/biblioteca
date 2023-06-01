@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { HomeView, AddingView, LibraryView, WishlistView, ErrorView, FavoritesView, LoginView } from '@pages'
+import { HomeView, AddingView, LibraryView, WishlistView, ErrorView, FavoritesView, LoginView, RegisterView } from '@pages'
 import '@styles/base/app.scss'
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
           <Route path='wishlist' element={<WishlistView />}></Route>
           <Route path='favorites' element={<FavoritesView />}></Route>
           <Route path='/login' element={<LoginView />}></Route>
+          <Route path='/register' element={<RegisterView />}></Route>
           <Route path='/*' element={<ErrorView />}></Route>
         </Routes>
       </BrowserRouter>

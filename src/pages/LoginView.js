@@ -1,6 +1,5 @@
 import React from 'react'
 import { Login } from '@components'
-import '@styles/pages/loginView.scss'
 
 const LoginView = () => {
     return (
