@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux'
 
 const Login = () => {
     const dispatch = useDispatch()
-
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -19,10 +18,11 @@ const Login = () => {
                 <input type='text' id='Login_password' placeholder="Motdepasse1*" minLength={8} maxLength={32} required onChange={(event) => setPassword(event.target.value)} />
                 <button className='Login_submit' onClick={(event) => {
                     event.preventDefault()
-                    dispatch({ 
-                        type: 'Users/login', 
-                        email: email, 
-                        password: password })
+                    dispatch({
+                        type: 'Users/login',
+                        email: email,
+                        password: password
+                    })
                 }}>Se connecter</button>
                 <Link to="/register">S'inscrire</Link>
             </form>

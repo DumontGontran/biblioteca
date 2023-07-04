@@ -7,6 +7,7 @@ const SearchBar = () => {
         <form className='searchBar'>
             <input type='text' id='search' placeholder='Rechercher...' />
             <select id='format'>
+                <option value='Tout'>Tout</option>
                 <option value='Poche'>Poche</option>
                 <option value='Relié'>Relié</option>
                 <option value='Broché'>Broché</option>

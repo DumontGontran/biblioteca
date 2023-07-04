@@ -9,9 +9,9 @@ import child from '@images/child.avif'
 import teenager from '@images/teenager.avif'
 import adventure from '@images/adventure.avif'
 import theater from '@images/theater.avif'
-import BD from '@images/BD.avif'
+import bd from '@images/BD.avif'
 
-const API_baseUrl = 'http://localhost:8888'
+const apiBaseUrl = 'http://localhost:8888'
 
 const categories = createSlice({
     name: 'Categories',
@@ -60,7 +60,7 @@ const categories = createSlice({
             {
                 id: 9,
                 title: 'BD',
-                background: BD
+                background: bd
             },
             {
                 id: 10,
@@ -76,7 +76,8 @@ const categories = createSlice({
 const users = createSlice({
     name: 'Users',
     initialState: {
-    user: {}
+        user: {},
+        token: JSON.parse(sessionStorage.getItem('token'))
     },
     reducers: {
         login: async (state, action) => {
@@ -85,11 +86,16 @@ const users = createSlice({
                 password: action.password
             }
 
-            console.log('user: ', state.user)
+            await axios
+                .post(`${apiBaseUrl}/auth/login`, state.user)
+                .then((res) => {
+                    if (res.data.access_token) {
+                        sessionStorage.setItem('token', JSON.stringify(res.data))
+                        window.location.replace('http://localhost:3000/')
+                    }
 
-            const res = await axios.post(`${API_baseUrl}/auth/login`, state.user)
-            console.log(res.data)
-            return res.data
+                    return res.data
+                })
         },
         register: async (state, action) => {
             state.user = {
@@ -101,11 +107,25 @@ const users = createSlice({
                 confirmPassword: action.confirmPassword
             }
 
-            console.log('user: ', state.user)
+            await axios
+                .put(`${apiBaseUrl}/users`, state.user)
+                .then((res) => {
+                    if (res.data.access_token) {
+                        window.location.replace('http://localhost:3000/login')
+                    }
 
-            const res = await axios.post(`${API_baseUrl}/users`, state.user)
-            console.log(res.data)
-            return res.data
+                    return res.data
+                })
+        },
+        profilEdit: () => {
+
+        },
+        profilDelete: () => {
+
+        },
+        logout: () => {
+            sessionStorage.removeItem('token')
+            window.location.replace('http://localhost:3000/login')
         }
     }
 })
@@ -126,5 +146,10 @@ export const store = configureStore({
         Categories: categories.reducer,
         Users: users.reducer,
         Library: library.reducer
-    }
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            immutableCheck: false,
+            serializableCheck: false
+        })
 })

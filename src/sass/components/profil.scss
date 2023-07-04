@@ -1,0 +1,83 @@
+.Profil {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". profil_title profil_title profil_title ."
+        ". . . . ."
+        ". profil_form profil_form profil_form ."
+        ". . . . ."
+        ". . . . .";
+    background-color: darkorchid;
+    margin-left: 80%;
+    width: 600px;
+    max-height: 57.55rem;
+
+    &_head {
+        display: flex;
+        justify-content: space-evenly;
+        height: 120px;
+
+        &_titre {
+            color: white;
+            grid-area: profil_title;
+            text-decoration: underline;
+            font-size: 30px;
+        }
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        grid-area: profil_form;
+        border-left: 1px solid darkgray;
+        border-right: 1px solid darkgray;
+        padding: 135px 10px;
+
+        & a {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    & label {
+        text-align: left;
+        margin-bottom: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    & input {
+        margin-bottom: 20px;
+    }
+
+    &_submit {
+        color: whitesmoke;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: lightskyblue;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: background-color 400ms ease-in-out;
+
+        &:hover {
+            background-color: green;
+        }
+    }
+
+    &_delete {
+        color: whitesmoke;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: lightskyblue;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: background-color 400ms ease-in-out;
+
+        &:hover {
+            background-color: darkred;
+        }
+    }
+}

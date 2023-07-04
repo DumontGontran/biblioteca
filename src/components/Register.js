@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import '@styles/components/register.scss'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -30,15 +30,15 @@ const Register = () => {
                 <label htmlFor='Register_password-confirm'>Confirmer mot de passe: *</label>
                 <input type='text' id='Register_password-confirm' placeholder="Motdepasse1*" minLength={8} maxLength={32} required onChange={(event) => setConfirmPassword(event.target.value)} />
                 <button className='Register_submit' onClick={(event) => {
-                    event.preventDefault();
+                    event.preventDefault()
                     dispatch({
                         type: 'Users/register',
-                        pseudo: pseudo,
-                        nom: nom,
-                        prenom: prenom,
-                        email: email,
-                        password: password,
-                        confirmPassword: confirmPassword
+                            pseudo: pseudo,
+                            nom: nom,
+                            prenom: prenom,
+                            email: email,
+                            password: password,
+                            confirmPassword: confirmPassword
                     })
                 }}>S'inscrire</button>
                 <Link to="/login">Se connecter</Link>
