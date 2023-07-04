@@ -1,23 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '@styles/components/login.scss'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 const Login = () => {
-    const navigate = useNavigate()
+    const dispatch = useDispatch()
 
-    const navigateToHomepage = () => {
-        navigate('/')
-    }
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
         <section className='Login'>
             <form className='Login_form'>
-            <h1 className='Login_head_titre'>Connexion</h1>
-                <label htmlFor='Login_pseudo'>Pseudo: *</label>
-                <input type='text' id='Login_pseudo' minLength={1} maxLength={32} required />
+                <h1 className='Login_head_titre'>Connexion</h1>
+                <label htmlFor='Login_email'>Email: *</label>
+                <input type='text' id='Login_email' minLength={1} maxLength={32} required onChange={(event) => setEmail(event.target.value)} />
                 <label htmlFor='Login_password'>Mot de passe: *</label>
-                <input type='text' id='Login_password' placeholder="Motdepasse1*" minLength={8} maxLength={32} required />
-                <button className='Login_submit' onClick={navigateToHomepage}>Se connecter</button>
+                <input type='text' id='Login_password' placeholder="Motdepasse1*" minLength={8} maxLength={32} required onChange={(event) => setPassword(event.target.value)} />
+                <button className='Login_submit' onClick={(event) => {
+                    event.preventDefault()
+                    dispatch({ 
+                        type: 'Users/login', 
+                        email: email, 
+                        password: password })
+                }}>Se connecter</button>
                 <Link to="/register">S'inscrire</Link>
             </form>
         </section>

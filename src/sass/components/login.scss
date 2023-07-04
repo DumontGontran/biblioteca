@@ -32,10 +32,12 @@
         grid-area: login_form;
         border-left: 1px solid darkgray;
         border-right: 1px solid darkgray;
-        padding: 314px 10px;
+        padding: 311px 10px;
 
         & a {
             color: whitesmoke;
+            font-weight: bold;
+            font-size: 20px;
         }
     }
 
